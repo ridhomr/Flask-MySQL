@@ -1,0 +1,36 @@
+<!--Ridho Marhaban-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Flask-MySQL</title>
+</head>
+<body>
+	<h2>Contoh Flask-MySQL</h2>
+	<h3>Ridho Marhaban</h3>
+	<table border="1">
+		<tr>
+			<td>No</td>
+			<td>Nama</td>
+			<td>Alamat</td>
+			<td>Kota</td>
+			<td>Agama</td>
+			<td>No telp</td>
+			<td>Ubah</td>
+			<td>Hapus</td>
+		</tr>
+		{% for baris in container %}
+		<tr>
+			<td>{{ baris[0] }}</td>
+			<td>{{ baris[1] }}</td>
+			<td>{{ baris[2] }}</td>
+			<td>{{ baris[3] }}</td>
+			<td>{{ baris[4] }}</td>
+			<td>{{ baris[5] }}</td>
+			<td><a href="{{ url_for('update',no=baris[0]) }}">Ubah</a></td>
+			<td><a href="{{ url_for('delete', no=baris[0]) }}">Hapus</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+	<p><a href="{{ url_for('insert') }}">Tambah Data</a></p>
+</body>
+</html>

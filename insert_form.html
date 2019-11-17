@@ -1,0 +1,28 @@
+<!---Ridho Marhaban-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Flask-MySQL</title>
+</head>
+<body>
+	<h2>Tambah Data</h2>
+	<form action="{{ url_for('insert') }}" method="post">
+		Nama: <br />
+		<input type="text" name="nama" size="50" 
+			maxlength="50" /><br>
+		Alamat:<br />
+		<input type="text" name="alamat" size="20"
+			maxlength="20" /><br />
+		Kota:<br />
+		<input type="text" name="kota" size="20"
+			maxlength="20" /><br />
+		Agama:<br />
+		<input type="text" name="agama" size="20"
+			maxlength="20" /><br />
+		No Telp:<br />
+		<input type="text" name="no_telp" size="20"
+			maxlength="20" /><br />
+		<p><input type="submit" value="Simpan"></p><br />
+	</form>
+</body>
+</html>
